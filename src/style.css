@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/** Container **/
+#app {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+/** Header **/
+header {
+  background: #D4A848;
+  padding: 12px 0 0 0;
+  color: white;
+}
+
+nav {
+  padding-left: 28px;
+}
+
+div#logo img {
+  width: 200px;
+}
+
+nav, ul, li {
+  display: inline-block;
+  padding-right: 4px;
+  margin-top: 8px;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+mav, ul, li, a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  cursor: pointer;
+}
+
+/** Main **/
+main {
+  background-color: #E3DDD3;
+  background-image: url(./assets/main/1background.png);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.slide1 {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  right: 50%;
+}
+.slide2 {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  right: 50%;
+  opacity: 0;
+}
+.fade-in {
+  /* animation: fade-in 2s normal forwards ease-in-out;
+  animation-play-state: paused; */
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.main-title h1 {
+  font-size: clamp(1em, 1em + 2vw, 2em);
+  color: #E3DDD3;
+  letter-spacing: 2rem;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #876F40;
+}
+
+div.main-title {
+  width: 100vw;
+}
+.main-title p {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  color: #B18B3B;
+}
+.box-video {
+  display: flex;
+  align-items: end;
+  width: 90vw;
+
+  flex-direction: column;
+}
+
+iframe {
+  border: 8px white solid;
+  width: 538px;
+  height: 288px;
+
+  z-index: 2;
+  margin-top: 20vw;
+}
+
+.box-video p {
+  padding: 20px 0 38px 0;
+  font-size: 22px;
+  color: #AF8833;
+  
+  font-weight: 700;
+}
+
+/** BENEFICIOS **/
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  padding: 3rem 0 0 0;
+  background-color: #404343;
+  gap: 4px;
+}
+div.skills span {
+  font-weight: 700;
+}
+
+div.skill {
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 300px;
+
+  border-radius: 13px;
+  border-right: 4px solid #DCD2BF;
+  border-top: 4px solid #DCD2BF;
+
+  background-color: #58687C;
+}
+
+div.skill:hover {
+  border:none;
+  border-left: 4px solid #DCD2BF;
+  border-bottom: 4px solid #DCD2BF;
+}
+
+div.skill i {
+  padding: 0 0 28px 0;
+}
+
+div.skill strong {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+}
+
+div.skill p {
+  margin-top: 8px;
+  color: white;
+  font-size: 18px;
+}
+
+/** SECÃO SOBRE **/
+div#about-container {
+  display: flex;
+  justify-content: center;
+  background-color: #E4DCCD;
+
+  gap: 4rem;
+  padding: 18px;
+}
+
+div#about {
+  width: 400px;
+  padding: 10px 8px;
+  margin: 120px 10px 30px 10px;
+
+  background-color: white;
+  border-radius: 13px;
+}
+
+div#about-content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: start;
+}
+
+div#about-content strong {
+  color: #806B3F;
+  font-size: 20px;
+}
+
+.doctor {
+  text-align: center;
+  font-weight: 500;
+}
+
+div#about-content p {
+  width: 237px;
+  font-size: 14px;
+  text-align: start;
+
+  width: auto;
+  padding: 8px;
+}
+
+img#perfil {
+  width: 50%;
+  border: 10px white solid;
+  border-radius: 50%;
+
+  margin: 0px -30px -40px 0px;
+  background: white;
+  position: relative;
+  
+  right: 10%;
+  bottom: 50%;
+}
+/** CLINICA **/
+section.c-clinic {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #ECEAE5; 
+}
+
+.c-clinic img {
+  width: 100%;
+  padding: 2rem;
+}
+
+/** NUTROLOGIA **/
+section.c-info {
+  background-color: #AF9E82;
+}
+
+.info-title h1 {
+  background-color: #5e491b;
+  letter-spacing: 8px;
+  font-size: 28px;
+
+  font-weight: 400;
+  color: white;
+  padding: 4px;
+}
+
+.box-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 20px 2rem 20px;
+
+  color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.card-flex {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  
+  flex-direction: row;
+  width: 100%;
+}
+.card-flex p {
+  text-align: left;
+  font-size: 19px;
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+  border-radius: 2px;
+  width: 50%;
+
+  padding: 40px;
+  gap: 2rem;
+  display: flex;
+  
+  flex-direction: column;
+  filter: drop-shadow(16px 16px 20px #5E491B);
+}
+
+.card-flex img{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/** CAMINHOS **/
+section.roads {
+  background: #58687C;
+  width: 100%;
+  max-width: 100%;
+}
+#box-road {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+
+  gap: 1rem;
+}
+#road1 {
+  width: 100%;
+  max-width: 100%; 
+  background: 
+    url(./assets/road1.png)
+    no-repeat
+    center
+    cornflowerblue
+  ;
+
+  background-size: cover; 
+  background-position: center;
+  padding: 18px;
+}
+#road2 {
+  width: 100%;
+  max-width: 100%;
+  background: 
+    url(./assets/road2.png)
+    no-repeat
+    center
+    cornflowerblue
+  ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 18px;
+}
+.road {
+  color: white;
+  border-radius: 10px;
+  text-align: left;
+}
+.road p {
+  font-size: clamp(1em, 1em + 1vw, 1em);
+}
+.road span {
+  font-weight: 700;
+}
+/** RESPONSIVIDADE SECTION CAMINHOS **/
+@media(max-width: 900px) {
+  #box-road {
+    flex-direction: column;
+  }
+}
+
+/** ERROS **/
+section.error {
+  background: url(./assets/error/background-errors.png)
+  no-repeat
+  center;
+  background-size: cover; 
+  background-position: center;
+  width: 100%;
+}
+.box-error {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  align-items: end;
+  justify-content: space-evenly;
+  padding: 28px;
+
+  gap: 2rem;
+}
+.error1 {
+  width: 45%;
+}
+.error2 {
+  width: 50%;
+}
+.error3 {
+  width: 55%;
+}
+.box-error span{
+  font-size: clamp(1em, 1em + 1vw, 1em);
+}
+.box-error h5 {
+  color: #636363;
+}
+.box-error p {
+  font-size: clamp(1em, 1em + 1vw, 1em);
+  color: #5b5b5b;
+}
+@media(max-width: 1100px) {
+  .error1 {
+    width: 90%;
+  }
+  .error2 {
+    width: 90%;
+  }
+  .error3 {
+    width: 90%;
+  }
+}
+/** SECTION DEPOIMENTOS **/
+.c-feedback {
+  padding: 0 0 6rem 0;
+  background-color: white;
+  text-align: center;
+}
+.box-feedback {
+  display: grid;
+  justify-content: center;
+  background-color: #F7F7F7;
+
+  padding: 1rem 0 0 0;
+}
+.feedbacks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.feedback-title h1 {
+  font-weight: 700;
+  color: #c1c1c1;
+  font-size: 3rem;
+}
+.box-feedback img {
+  width: 208px;
+  border: 10px #c1c1c1 solid;
+  margin-bottom: 1rem;
+
+  margin-left: 1rem;
+}
+/** Responsividade Depoimentos **/
+@media(max-width: 1400px) {
+  .box-feedback {
+    gap: 1rem;
+  }
+}
+@media(max-width: 600px) {
+  .box-feedback div {
+    display: block;
+    gap: 1rem;
+  }
+}
+/** SECTION FOOTER **/
+.c-rodape {
+  background-color: #C0963E;
+}
+.footer-links a {
+  font-size: 1rem;
+  font-weight: 400;
+}
+/** DIV **/
+.box-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+/** INFORMAÇÕES **/
+.infos {
+  color: white;
+  max-width: 100%;
+  width: 100%;
+
+  padding-left: 1rem; 
+}
+/** WHATSAPP **/
+.contato {
+  text-align:center;
+  max-width: 100%;
+  width: 100%;
+}
+.contato h4 {
+  color: white;
+}
+.btn-whats {
+  border: none;
+  border-radius: 10px;
+  background-color: #25D366;
+  color: white;
+  font-weight: 700;
+
+  padding: 5px 30px;
+}
+
+.icones {
+  max-width: 100%;
+  width: 100%;
+}
+/** RESPONSIVIDADE FOOTER **/
+@media(max-width: 800px) {
+  .box-footer {
+    padding-bottom: 1rem;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 1100px) {
+  /** HEADER **/
+  main {
+    height: auto;
+  }
+  .slide1 {
+    display: none;
+  }
+  .slide2 {
+    display: none;
+  }
+
+  div#subtitle {
+    font-size: 28px;
+    letter-spacing: 18px;
+    color: #B18B3B;
+  }
+  iframe {
+    border: 8px white solid;
+    width: 438px;
+    height: 288px;
+  }
+}
+@media(max-width: 800px) {
+  .box-video {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+  }
+  iframe {
+    border: 8px white solid;
+    width: 90%;
+    height: 40vh;
+  }
+
+  /** CLINICA **/
+  .c-clinic img {
+    height: 30vh;
+    padding: 2px;
+  }
+
+  /** NUTROLOGIA **/
+  .card-flex {
+    flex-wrap: wrap;
+  }
+  .card-1, .card-2, .card-3, .card-4 {
+    width: 100%;
+  }
+
+  /** CAMINHOS **/
+  #box-road {
+    padding: 1rem;
+  }
+}
+
